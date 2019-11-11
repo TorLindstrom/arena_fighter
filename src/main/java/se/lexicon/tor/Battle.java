@@ -3,28 +3,28 @@ package se.lexicon.tor;
 public class Battle {
 
 
-    public static Player tutorial(Player userCharacter) {
+    /*public static Player tutorial(Player userCharacter) {
         System.out.print("Now for your first fight!\n\n<====|=() - Hope you don't die - ()=|====>\n\n");
         Player opponent = new Player(Player.getRandomName(), 1, 1, 1);
         tellAboutOpponent(opponent);
 
         return fightWithDice(userCharacter, opponent);
-    }
+    }*/
 
-    public static Player playBattle(Player userCharacter, int round) {
+    /*public static Player playBattle(Player userCharacter, int round) {
         System.out.print("Another fight lines up, either you die, or you win.\nSimple as that.\n\n");
         userCharacter.printYourStats();
         Player opponent = new Player(round);
         tellAboutOpponent(opponent);
         return fightWithDice(userCharacter, opponent);
-    }
+    }*/
 
     public static void tellAboutOpponent(Player opponent) {
         System.out.print("Your opponent is: " + opponent.getName() + "\n");
         opponent.printStats();
     }
 
-    public static Player fightWithDice(Player userCharacter, Player opponent) {
+    /*public static Player fightWithDice(Player userCharacter, Player opponent) {
         System.out.print("\n" + userCharacter.getName() + " versus " + opponent.getName() + "\n\n--- Fight! ---\n\n");
         int userHp = userCharacter.getHp();
         int opponentHp = opponent.getHp();
@@ -56,5 +56,5 @@ public class Battle {
                 System.out.println("You both hit pretty damn hard, no blood though");
             }
         }
-    }
+    }*/
 }

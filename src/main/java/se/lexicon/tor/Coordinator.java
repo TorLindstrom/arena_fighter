@@ -10,19 +10,20 @@ public class Coordinator implements ActionListener {
 
     Player player = new Player(1);
 
-    NameWindow start;
+    NameWindow askName;
     MainWindow main;
 
     public Coordinator(){
-
-        start = new NameWindow(this);
     }
 
     public void actionPerformed(ActionEvent e){
-            String name = start.nameInput.getText();
-            start.setVisible(false);
-            player.setName(name);
-            main = new MainWindow(player);
-            main.run(player);
+
     }
+
+    public void useName(){
+        String name = askName.nameInput.getText();
+        askName.setVisible(false);
+        player.setName(name);
+    }
+
 }

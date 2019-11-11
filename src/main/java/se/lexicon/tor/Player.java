@@ -1,6 +1,6 @@
 package se.lexicon.tor;
 
-import static se.lexicon.tor.App.sc;
+//import static se.lexicon.tor.App.sc;
 
 public class Player {
 
@@ -29,7 +29,7 @@ public class Player {
 
     //------------------------------------------------------------------------------------------------------------------
 
-    public void askForCreation() {
+    /*public void askForCreation() {
         System.out.print("We'll start by giving your character a name: ");
         name = sc.nextLine();
         System.out.print("\nProbably a good name, I can't read. Now then...\nDo you wish to get a starting equipment piece or some well needed Denarius?\n\nEquipment piece or money: ");
@@ -77,7 +77,7 @@ public class Player {
         System.out.println("Great! Maybe, let's see your starting stats....\n");
         this.printYourStats();
         System.out.println("Nice, almost as strong as...uh...something weak, but that's fine, you'll grow!");
-    }
+    }*/
 
     public static String getRandomName(){
         int number = Dice.getRandom(names.length-1);
@@ -93,14 +93,16 @@ public class Player {
 
     public Player(int round){
         this.name = getRandomName();
-
-        this.strength += (int) Dice.getRandomDouble() + Dice.getRandom(round)*1.1 + 0.5;
-        this.speed += (int) Dice.getRandomDouble() + Dice.getRandom(round)*1.1 + 0.5;
-        this.precision += (int) Dice.getRandomDouble() + Dice.getRandom(round)*1.1 + 0.5;
-        this.hp += (int) Dice.getRandomDouble() + Dice.getRandom(round)*1.1 + 0.5;
+        if (round!=0) {
+            this.strength += (int) Dice.getRandomDouble() + Dice.getRandom(round) * 1.1 + 0.5;
+            this.speed += (int) Dice.getRandomDouble() + Dice.getRandom(round) * 1.1 + 0.5;
+            this.precision += (int) Dice.getRandomDouble() + Dice.getRandom(round) * 1.1 + 0.5;
+            this.hp += (int) Dice.getRandomDouble() + Dice.getRandom(round) * 1.1 + 0.5;
+        }
     }
 
-    Player() {
+    public Player() {
+        strength++;
         //askForCreation();
     }
 
