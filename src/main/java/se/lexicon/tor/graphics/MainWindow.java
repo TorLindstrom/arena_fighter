@@ -23,7 +23,6 @@ public class MainWindow extends JFrame implements ActionListener {
 
     JPanel left = new JPanel();
     JPanel right = new JPanel();
-    JLabel welcomeTitle = new JLabel("<====|=() ----- Welcome! ----- ()=|====>");
     JLabel nameTitle = new JLabel();
     JLabel dieRoll =new JLabel();
     JTextArea filler = new JTextArea();
@@ -47,14 +46,9 @@ public class MainWindow extends JFrame implements ActionListener {
         add(rightPane1);
         left.setBorder(new EtchedBorder());
         right.setBorder(new EtchedBorder());
-        left.add(welcomeTitle);
-        welcomeTitle.setBorder(new EtchedBorder());
-        welcomeTitle.setFont(new Font("sansSerif", Font.BOLD, 20));
-        welcomeTitle.setPreferredSize(new Dimension(850, 70));
-        welcomeTitle.setHorizontalAlignment(SwingConstants.CENTER);
         left.add(nameTitle);
         nameTitle.setText("\t<===| " + this.player.getName() + " |===>\t");
-        nameTitle.setFont(new Font("sansSerif", Font.PLAIN, 20));
+        nameTitle.setFont(new Font("sansSerif", Font.PLAIN, 30));
         nameTitle.setPreferredSize(new Dimension(500, 50));
         nameTitle.setHorizontalAlignment(SwingConstants.CENTER);
         left.add(dieRoll);
